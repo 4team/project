@@ -9,33 +9,40 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         
+        <input type='hidden' name='bno' value="${read.bno}">
+        
         <table class="table table-bordered">
-        	<tr>
-        		<th style="width: 10px">BNO</th>
-        		<th>TITLE</th>
-        		<th>WRITER</th>
+        	
+        		<tr style="width: 10px"><td>BNO : ${read.bno}</td></tr>
+        		<tr><td>TITLE : ${read.title}</td></tr>
+        		<tr><td>WRITER : ${read.writer}</td></tr>
+        		<tr><td>CONTENT : ${read.content}</td></tr>
+        		
+        		</table>
+        		
+        		
         		<!-- <th>REGDATE</th>
         		<th style="width : 40px"> VIEWCNT</th> -->
-        	</tr>
         	
-        	<c:forEach items="${list}" var="boardVO">
-        	 
-        		<tr>
-        			<td>${boardVO.bno}</td>
-        			<td><a href='/board/read?bno=${boardVO.bno}'>${boardVO.title}</a></td>
-        			<td>${boardVO.writer}</td>
+        	
         			<!--<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}"/></td>
         			<td><span class="badge bg-red">${boradVO.viewcnt}</span></td>-->
-        		</tr>	
-        	
-        	
-        	
-        	</c:forEach>	
-        		
-        
-        
-        </table>
-
+        		   
+<form action="/board/list">
+<input type="submit" value="목록">
+</form>
+		   
+<form action="/board/modify">
+<input type="hidden" name="bno" value="${read.bno}">
+<input type="submit" value="수정">
+</form>
+		   
+<form action="/board/remove" method="post">
+<input type="hidden" name="bno" value="${read.bno}">
+<input type="submit" value="삭제">
+</form>
+        		   
+        		      		
       </div><!-- /.content-wrapper -->
      
 <%@include file="../include/footer.jsp"%>

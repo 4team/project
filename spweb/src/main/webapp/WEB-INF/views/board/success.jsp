@@ -10,6 +10,7 @@
         <!-- Content Header (Page header) -->
         <h1>SUCCESS PAGE!!</h1>	
         
+        <h2> ${msg} </h2>
         
 
       </div><!-- /.content-wrapper -->
