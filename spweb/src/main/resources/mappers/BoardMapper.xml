@@ -28,13 +28,13 @@
 	<update id="update">
 		update tbl_board set
 		title = #{title},
-		context = #{content},
+		content = #{content},
 		updatedate = sysdate
 		where bno = #{bno}
 	</update>
 
 	<select id="list" resultMap="listResult">
-		select * from tbl_board order by bno desc
+		select * from tbl_board where bno<200 order by bno desc
 	</select>
 
 </mapper>

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@ include file="css/board.css" %>
 <%@include file="../include/header.jsp" %>
 
       <!-- Content Wrapper. Contains page content -->
@@ -13,7 +13,7 @@
         	<tr>
         		<th style="width: 10px">BNO</th>
         		<th>TITLE</th>
-        		<th>WRITER</th>
+        		<th style="width:50px">WRITER</th>
         		<!-- <th>REGDATE</th>
         		<th style="width : 40px"> VIEWCNT</th> -->
         	</tr>
