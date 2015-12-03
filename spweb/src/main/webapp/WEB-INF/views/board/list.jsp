@@ -9,6 +9,7 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         
+        
         <table class="table table-bordered">
         	<tr>
         		<th style="width: 10px">BNO</th>
@@ -31,12 +32,13 @@
         	
         	
         	</c:forEach>	
-        		
-        
-        
+        	
+       
         </table>
-
-      </div><!-- /.content-wrapper -->
+				<form action="/board/create">
+					<input type="submit" value="글쓰기">
+				</form>
+</div><!-- /.content-wrapper -->
      
 <%@include file="../include/footer.jsp"%>
 

@@ -11,20 +11,23 @@
         <form method="post">
         	<div class="box-body">
         		<lable>Title</lable>
-        	 	<input type="text" name="title" class="form-control" placeholder="Enter Title">
-        	</div>
-        	<div class="form-group">
-        		<label>Content</label>
-        		<textarea type="text" name="content" rows="3" placeholder="Enter..."></textarea>	
+        	 	<input type="text" name="title" class="form-control" >
         	</div>
         	<div class="form-group">
         		<label>Writer</label>
-        		<input type="text" name="writer" class="form-control" placeholder="Enter Writer">
+        		<textarea type="text" name="writer" class="form-control" ></textarea>	
+        	</div>
+        	<div class="form-group">
+        		<label>Content</label>
+        		<input type="text" name="content" class="form-control" >
         	</div>    
         	
         	<div class="box-footer">
-        	<button type="submit" class="btn btn-primary">Submit</button>
+        	<button type="submit" class="btn btn-primary">저장</button>
         	</div>            
+        </form>
+        <form action ="/board/list" >
+        <input type="submit" value="취소">  
         </form>        
       </div>
       <!-- /.content-wrapper -->

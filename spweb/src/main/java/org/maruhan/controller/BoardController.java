@@ -45,23 +45,23 @@ public class BoardController {
 	
 	
 	@RequestMapping(value = "/create" , method= RequestMethod.GET)
-	public void createGET(Model model) throws Exception{
-		logger.info("Create get......");
-
-	}
-	
+	public String createGET() throws Exception{
+		logger.info("create get......");
+		
+		return "/board/create";
+}
 	
 	@RequestMapping(value = "/create" , method= RequestMethod.POST)
-	public String createPOST(Model model, BoardVO vo) throws Exception{
-		logger.info("Create post......");
+	public String createPOST(BoardVO vo, Model model) throws Exception{
 		
-		service.regist(vo);
-		model.addAttribute("result", "success");
+		logger.info("create post......");
+				
+	    service.regist(vo);
+		
+		model.addAttribute("msg", "글쓰기 완료!");
 		
 		return "/board/success";
-
 	}
-
 	@RequestMapping(value = "/read" , method= RequestMethod.GET)
 	public String readGET(@RequestParam("bno") int bno, Model model) throws Exception{
 		logger.info("Read get......");
@@ -72,7 +72,7 @@ public class BoardController {
 	
 	@RequestMapping(value = "/remove" , method= RequestMethod.POST)
 	public String removePOST(@RequestParam("bno") int bno, Model model) throws Exception{
-		logger.info("Create post......");
+		logger.info("remove post......");
 		
 		service.remove(bno);
 		
@@ -84,7 +84,7 @@ public class BoardController {
 	
 	@RequestMapping(value = "/modify" , method= RequestMethod.GET)
 	public String modifyGET(@RequestParam("bno") int bno, Model model) throws Exception{
-		logger.info("Read get......");
+		logger.info("modify get......");
 		
 		model.addAttribute("board", service.view(bno));
 		return "/board/modify";
@@ -92,11 +92,12 @@ public class BoardController {
 	
 	@RequestMapping(value = "/modify" , method= RequestMethod.POST)
 	public String modifyPOST(BoardVO vo, Model model) throws Exception{
+		
 		logger.info("modify post......");
+				
+	    service.update(vo);
 		
-
-		
-		model.addAttribute("board", "삭제완료!");
+		model.addAttribute("msg", "수정 완료!");
 		
 		return "/board/success";
 	}
