@@ -92,7 +92,7 @@ public class BoardController {
 	
 	@RequestMapping(value = "/modify" , method= RequestMethod.POST)
 	public String modifyPOST(BoardVO vo, Model model) throws Exception{
-		logger.info("Create post......");
+		logger.info("modify post......");
 		
 
 		
