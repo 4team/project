@@ -50,7 +50,6 @@ public class BoardController {
 	@RequestMapping(value = "/create" , method= RequestMethod.GET)
 	public void createGET(Model model) throws Exception{
 		logger.info("Create get......");
-		
 
 	}
 	
