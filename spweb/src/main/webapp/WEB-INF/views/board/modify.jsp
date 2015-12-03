@@ -12,12 +12,17 @@
         
         <form action="/board/modify" method="post">
 			<input type="hidden" name="bno" value="${board.bno}">
-	        <table class="table table-bordered">
+	        <div >
+	         	TITLE<br>
+	         	WRITER<br>
+	         	CONTENT<br>
+	        
+	        </div>
 	        	
-	        		<tr style="width: 10px"><td>BNO : ${board.bno}</td></tr>
-	        		<tr><td>TITLE <input type="text" name="title" value="${board.title}"></td></tr>
-	        		<tr><td>WRITER <input type="text"  name ='writer' value="${board.writer}"></td></tr>
-	        		<tr><td>CONTENT <input type="text" name='content' value="${board.content}"></td></tr>
+	        		
+	        		<tr><td>TITLE <input type="text" size="100px" name="title" value="${board.title}"></td></tr>
+	        		<tr><td>WRITER <input type="text" size="100px" name ='writer' value="${board.writer}"></td></tr>
+	        		<tr><td>CONTENT <input type="text" size="100px" name='content' value="${board.content}"></td></tr>
 	        		
 	        		</table>
 	        		
