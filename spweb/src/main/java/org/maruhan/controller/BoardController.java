@@ -47,7 +47,6 @@ public class BoardController {
 	@RequestMapping(value = "/create" , method= RequestMethod.GET)
 	public void createGET(Model model) throws Exception{
 		logger.info("Create get......");
-		
 
 	}
 	
@@ -56,6 +55,7 @@ public class BoardController {
 	public String createPOST(Model model, BoardVO vo) throws Exception{
 		logger.info("Create post......");
 		
+		service.regist(vo);
 		model.addAttribute("result", "success");
 		
 		return "/board/success";

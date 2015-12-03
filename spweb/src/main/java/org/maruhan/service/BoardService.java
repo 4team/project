@@ -24,8 +24,8 @@ public class BoardService {
 		mapper.delete(bno);
 	}
 	
-	public void update(int bno) throws Exception{
-		mapper.delete(bno);
+	public void update(BoardVO vo) throws Exception{
+		mapper.update(vo);
 	}
 	
 	public List<BoardVO> list() throws Exception{

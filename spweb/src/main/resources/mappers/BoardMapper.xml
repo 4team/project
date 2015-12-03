@@ -6,7 +6,7 @@
 	<resultMap type="org.maruhan.domain.BoardVO" id="listResult">
 		<id property="bno" column="bno"/>
 		<result property="title" column="title"/>
-		<result property="content" column="content"/>
+		<result property="content" column="context"/>
 		<result property="writer" column="writer"/>
 		<result property="regdate" column="regdate"/>
 		<result property="updatedate" column="updatedate"/>
