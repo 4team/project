@@ -34,7 +34,7 @@
 	</update>
 
 	<select id="list" resultMap="listResult">
-		select * from tbl_board
+		select * from tbl_board order by bno desc
 	</select>
 
 </mapper>
