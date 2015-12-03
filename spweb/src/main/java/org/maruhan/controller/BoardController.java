@@ -3,6 +3,7 @@ package org.maruhan.controller;
 import java.util.ArrayList;
 import java.util.List;
 import org.maruhan.domain.BoardVO;
+import org.maruhan.service.BoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -17,8 +18,8 @@ public class BoardController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
-	//@Autowired
-	//private BoardService service;
+	@Autowired
+	private BoardService service;
 	
 	
 	@RequestMapping(value = "/list" , method= RequestMethod.GET)
@@ -56,6 +57,7 @@ public class BoardController {
 	public String createPOST(Model model, BoardVO vo) throws Exception{
 		logger.info("Create post......");
 		
+		service.regist(vo);
 		model.addAttribute("result", "success");
 		
 		return "/board/success";
