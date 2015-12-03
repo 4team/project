@@ -10,6 +10,8 @@
 		<result property="writer" column="writer"/>
 		<result property="regdate" column="regdate"/>
 		<result property="updatedate" column="updatedate"/>
+		<result property="viewcount" column="viewcount"/>
+		<result property="reccount" column="reccount"/>
 	</resultMap>
 
 	<insert id="create">
