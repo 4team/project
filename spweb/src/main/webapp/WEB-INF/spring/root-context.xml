@@ -9,8 +9,8 @@
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
 		<property name="url" value="jdbc:oracle:thin:@192.168.0.36:1524:XE"></property>
-		<property name="username" value="user42"></property>
-		<property name="password" value="dmsgP"></property>
+		<property name="username" value="user40"></property>
+		<property name="password" value="user40"></property>
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
