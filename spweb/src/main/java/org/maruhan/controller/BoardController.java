@@ -39,6 +39,7 @@ public class BoardController {
 		
 		model.addAttribute("list",list);
 		
+		
 		//model.addAttribute("list", service.listAll());
 	}
 	
