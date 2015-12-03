@@ -34,7 +34,7 @@
 	</update>
 
 	<select id="list" resultMap="listResult">
-		select * from tbl_board where bno<200 order by bno desc
+		select * from tbl_board where bno <![CDATA[<]]> 200 order by bno desc
 	</select>
 
 </mapper>
