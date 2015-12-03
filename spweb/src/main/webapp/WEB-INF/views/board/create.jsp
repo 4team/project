@@ -8,24 +8,26 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
+        
         <form method="post">
+        	<div style= "size:60px">
+        		<label>Title</label>
+        	 	<input type="text" name="title"  class="form-control" >
+        	</div>
         	<div class="box-body">
-        		<lable>Title</lable>
-        	 	<input type="text" name="title" class="form-control" >
-        	</div>
-        	<div class="form-group">
         		<label>Writer</label>
-        		<textarea type="text" name="writer" class="form-control" ></textarea>	
+        		<input type="text" name="writer"  class="form-control" >	
         	</div>
-        	<div class="form-group">
+        	<div class="box-body">
         		<label>Content</label>
-        		<input type="text" name="content" class="form-control" >
+        		<textarea rows="15" cols="60"  name="writer" class="form-control" ></textarea>
         	</div>    
         	
-        	<div class="box-footer">
-        	<button type="submit" class="btn btn-primary">저장</button>
-        	</div>            
+        	<input type="submit" value="저장">
+        	
+        	           
         </form>
+        
         <form action ="/board/list" >
         <input type="submit" value="취소">  
         </form>        
